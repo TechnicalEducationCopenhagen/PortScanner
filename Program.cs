@@ -13,9 +13,10 @@ namespace PortScanner
         static void Main(string[] args)
         {
             string ip = "127.0.0.1";
-            //Console.Write("Indtast ip-adresse der skal skannes: ");
-            //string ip = Console.ReadLine();
-
+            if (args.Length > 0)
+            {
+                ip = args[0];
+            }
             IPAddress ipAdrrToScan = IPAddress.Parse(ip);
 
             int startPort = 1;
